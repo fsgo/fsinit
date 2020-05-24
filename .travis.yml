@@ -1,0 +1,6 @@
+language: go
+
+go:
+  - "1.14"
+
+script: go get github.com/fsgo/lazyfuncs && go test -race -cover ./...

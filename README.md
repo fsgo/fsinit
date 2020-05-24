@@ -1,6 +1,11 @@
 # lazyfuncs
 延迟方法管理，用于解决使用`init`方法后，执行逻辑不可控的问题。  
 
+[![Build Status](https://travis-ci.org/fsgo/lazyfuncs.png?branch=master)](https://travis-ci.org/fsgo/lazyfuncs)
+[![GoCover](https://gocover.io/_badge/github.com/fsgo/lazyfuncs)](https://gocover.io/github.com/fsgo/lazyfuncs)
+[![GoDoc](https://godoc.org/github.com/fsgo/lazyfuncs?status.svg)](https://godoc.org/github.com/fsgo/lazyfuncs)
+
+
 ## 对外接口 
 ```go
 // Register 注册延迟函数
