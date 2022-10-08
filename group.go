@@ -1,8 +1,6 @@
-/*
- * Copyright(C) 2020 github.com/hidu  All Rights Reserved.
- * Author: hidu (duv123+git@baidu.com)
- * Date: 2020/5/16
- */
+// Copyright(C) 2020 github.com/hidu  All Rights Reserved.
+// Author: hidu (duv123+git@baidu.com)
+// Date: 2020/5/16
 
 package lazyfuncs
 
@@ -18,7 +16,6 @@ func NewGroup() Group {
 
 // Group 一个init 分组
 type Group interface {
-
 	// Register 注册延迟函数
 	Register(fn func())
 
@@ -58,7 +55,7 @@ func (g *group) RegisterWithOrder(fn func(), order int) {
 	defer g.lock.Unlock()
 
 	if g.executed {
-		panic("already Executed, cannot Register new func")
+		panic("already Executed, cannot register new func")
 	}
 
 	g.lazyFns = append(g.lazyFns, lazyFn)

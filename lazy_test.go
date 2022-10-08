@@ -1,8 +1,6 @@
-/*
- * Copyright(C) 2020 github.com/hidu  All Rights Reserved.
- * Author: hidu (duv123+git@baidu.com)
- * Date: 2020/5/16
- */
+// Copyright(C) 2020 github.com/hidu  All Rights Reserved.
+// Author: hidu (duv123+git@baidu.com)
+// Date: 2020/5/16
 
 package lazyfuncs
 
@@ -22,7 +20,7 @@ func TestExecute(t *testing.T) {
 	Execute()
 	want := 91
 	if num != want {
-		t.Errorf("after Execute,num=%d, want=%d", num, want)
+		t.Errorf("after WithFunc,num=%d, want=%d", num, want)
 	}
 }
 
@@ -49,6 +47,6 @@ func TestExecute_panic(t *testing.T) {
 		}
 	}()
 
-	// 已经执行了 Execute 方法了，不允许注册新的方法
+	// 已经执行了 WithFunc 方法了，不允许注册新的方法
 	Register(func() {})
 }
