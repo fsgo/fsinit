@@ -13,18 +13,13 @@ func Register(fn func()) {
 }
 
 // RegisterWithOrder 注册延迟函数，同时指定执行顺序
-// 若有相同的order,则先注册的排前面
+// 若有相同的 order,则先注册的排前面
 func RegisterWithOrder(fn func(), order int) {
 	Default.RegisterWithOrder(fn, order)
 }
 
 // Execute 执行所有注册的函数
-// 执行之后不允许再注册新的函数，否则会panic
+// 执行之后不允许再注册新的函数，否则会 panic
 func Execute() {
 	Default.Execute()
-}
-
-// Func 返回一个包含了所有注册函数的方法
-func Func() func() {
-	return Default.Func()
 }
